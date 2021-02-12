@@ -1,0 +1,30 @@
+h2 {
+	color: #666666;
+}
+h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #330099;
+}
+
+body {
+
+	background-color: #FFFFFF;
+}
+.content {
+	left: 1in;
+	position: relative;
+	width: 5.5in;
+	top: 0.5in;
+}
+.paper
+ {
+	width: 7.896in;
+	position: absolute;
+	background-image: url(pictures/Notebook.jpg);
+	left: 7px;
+	top: 16px;
+	height: 1119px;
+}
+hr {
+}

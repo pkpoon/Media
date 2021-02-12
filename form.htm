@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+<link href="multimedia.css" rel="stylesheet" type="text/css">
+
+
+<script Language="Javascript">
+function displayInfo(thisform)
+{	var txtStatement='';
+
+	
+	if (thisform.rdoMale.checked)
+	{	txtStatement = thisform.txtName.value + ' is a male.\n';
+		txtStatement = txtStatement + 'His Nationality is ' + thisform.selCountry.options[thisform.selCountry.selectedIndex].value + '.\n';
+		if (thisform.chkSinging.checked) 
+		{	txtStatement = txtStatement + 'He likes Singing.\n';}
+		if (thisform.chkDancing.checked) 
+		{	txtStatement = txtStatement + 'He likes Dancing.\n';}
+		if (thisform.chkReading.checked) 
+		{	txtStatement = txtStatement + 'He likes Reading.\n';}
+		if (thisform.chkSwimming.checked) 
+		{	txtStatement = txtStatement + 'He likes Swimming.\n';}
+		if (thisform.chkSquash.checked) 
+		{	txtStatement = txtStatement + 'He likes Squash.\n';}
+	}
+	else
+	{	txtStatement = thisform.txtName.value + ' is a female.\n';
+		txtStatement = txtStatement + ' Her Nationality is ' + thisform.selCountry.options[thisform.selCountry.selectedIndex].value + '.\n';
+		if (thisform.chkSinging.checked) 
+		{	txtStatement = txtStatement + 'She likes Singing.\n';}
+		if (thisform.chkDancing.checked) 
+		{	txtStatement = txtStatement + 'She likes Dancing.\n';}
+		if (thisform.chkReading.checked) 
+		{	txtStatement = txtStatement + 'She likes Reading.\n';}
+		if (thisform.chkSwimming.checked) 
+		{	txtStatement = txtStatement + 'She likes Swimming.\n';}
+		if (thisform.chkSquash.checked) 
+		{	txtStatement = txtStatement + 'She likes Squash.\n';}
+
+	}
+//	alert(txtStatement);
+	thisform.txtASuggestion.value = txtStatement;
+    return true;		
+	
+}
+</script>
+
+</head>
+
+<body>
+<div class="paper">
+<div class="content">
+<h1>HTML Form</h1>
+<p>Web forms allow your users to type information into form fields on a web page. For example Userid and password in login Page, Text in Blog, Name, sex or age in User Information Page.</p>
+<h2>Common form elements</h2>
+<p>All form elements must be placed inside the form tag</p>
+<p>  &bull; Text Field: A single-line field for typing in text<br>
+  &bull; Hidden Field: A field that sends a value without your user seeing it<br>
+  &bull; Text Area: A multi-line text field for larger amounts of space<br>
+  &bull; Checkbox: Used when giving the user a choice of items (when they can choose more than one item)<br>
+  &bull; Radio Button: Used when giving the user a choice of items (when they can choose only one item)<br>
+  &bull; List/Menu<br>
+&bull; Button </p>
+<form onSubmit="displayInfo(frmInfo); return false;" type="submit"  name="frmInfo" id="frmInfo" >
+  <table width="296" border="1">
+    <tr>
+      <td colspan="2">Personal Inform </td>
+    </tr>
+    <tr>
+      <td width="49">Name</td>
+      <td width="231"><input name="txtName" type="text" id="txtName"></td>
+    </tr>
+    <tr>
+      <td>Sex</td>
+      <td><input name="rdoMale" type="radio" value="radiobutton">
+        Male 
+        <input name="rdoFemale" type="radio" value="radiobutton">
+        Female</td>
+    </tr>
+    <tr>
+      <td>Nationality</td>
+      <td><select name="selCountry" id="selCountry">
+        <option value="Hong Kong" selected>Hong Kong</option>
+        <option value="Indian">Indian</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="The Phillipines">The Philipines</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td colspan="2">Favourites (tick more than one) </td>
+    </tr>
+    <tr>
+      <td><input name="chkDancing" type="checkbox" id="chkDancing" value="checkbox"></td>
+      <td>Dancing</td>
+    </tr>
+    <tr>
+      <td><input name="chkSinging" type="checkbox" id="chkSinging" value="checkbox"></td>
+      <td>Singing</td>
+    </tr>
+    <tr>
+      <td><input name="chkReading" type="checkbox" id="chkReading" value="checkbox"></td>
+      <td>Reading</td>
+    </tr>
+    <tr>
+      <td><input name="chkSwimming" type="checkbox" id="chkSwimming" value="checkbox"></td>
+      <td>Swimming</td>
+    </tr>
+    <tr>
+      <td><input name="chkSquash" type="checkbox" id="chkSquash" value="checkbox"></td>
+      <td>squash</td>
+    </tr>
+    <tr>
+      <td colspan="2">Suggestion for school development </td>
+    </tr>
+    <tr>
+      <td colspan="2"><textarea name="txtASuggestion" cols="50" rows="4" id="txtASuggestion"></textarea></td>
+    </tr>
+  </table>
+  <p>
+    <input type="submit" name="Submit" value="Submit">
+
+</p>
+</form>
+<p>&nbsp;</p>
+</div>
+</div>
+</body>
+</html>
